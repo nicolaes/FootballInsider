@@ -1,0 +1,31 @@
+<h2>2011/12 English Premier League</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Position</th>
+            <th>Team name</th>
+            <th title="Played">Pld</th>
+            <th title="Wins">W</th>
+            <th title="Draws">D</th>
+            <th title="Losses">L</th>
+            <th title="Goals for">GF</th>
+            <th title="Goals against">GA</th>
+            <th title="Goals difference">GD</th>
+            <th>Points</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="team in leagueCtrl.league.teams track by team.id">
+            <td ng-bind="$index + 1"></td>
+            <td ng-bind="team.name"></td>
+            <td ng-bind="team.rank.played"></td>
+            <td ng-bind="team.rank.wins"></td>
+            <td ng-bind="team.rank.draws"></td>
+            <td ng-bind="team.rank.losses"></td>
+            <td ng-bind="team.rank.goalsFor"></td>
+            <td ng-bind="team.rank.goalsAgainst"></td>
+            <td ng-bind="team.rank.goalsDiff"></td>
+            <td ng-bind="team.rank.points"></td>
+        </tr>
+    </tbody>
+</table>
